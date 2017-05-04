@@ -1,25 +1,35 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export ZSH=/home/alexander/.oh-my-zsh
+export EDITOR='vim'
 
 ZSH_THEME="bira"
 DISABLE_AUTO_TITLE="true"
 
-ENABLE_CORRECTION="true"
+unsetopt correct_all
 CASE_SENSITIVE="false"
 HYPHEN_INSENSITIVE="true"
-COMPLETION_WAITING_DOTS="true"
 
-plugins=(colored-man-pages colorize dircycle extract per-directory-history web-search fasd jump wd battery emoji-clock nyan rand-quote)
-
+export ZSH=/home/alexander/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-export EDITOR='vim'
+export PATH=.:$HOME:$HOME/bin:/usr/local/bin:$PATH
+plugins=(colored-man-pages colorize dircycle extract per-directory-history web-search wd battery emoji-clock nyan rand-quote)
+
+eval "$(fasd --init auto)"
+alias fsd="fasd -b viminfo -b recently-used -b current"
+
+alias a="fsd -si"
+alias j="fasd_cd -d"
+alias f="fsd -f"
+alias v="f -e vim"
+
+alias wd="${ZSH}/plugins/wd/wd.sh"
+alias w="wd"
+alias wa="wd add!"
+alias wr="wd rm"
+alias ws="wd show"
+alias wc="wd clean!"
 
 alias c="clear"
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gs="git status -s"
+alias gt="git checkout"
+alias gc="git commit"
+alias gp="git pull"
+alias gg="git push"
