@@ -20,7 +20,9 @@ alias j="fasd_cd -d"
 alias f="fsd -f"
 alias v="f -e vim"
 
-alias wd="${ZSH}/plugins/wd/wd.sh"
+wd() {
+    . ${ZSH}/plugins/wd/wd.sh
+}
 alias w="wd"
 alias wa="wd add!"
 alias wr="wd rm"
