@@ -17,3 +17,5 @@ set number
 set relativenumber
 
 syntax on
+
+cnoreabbrev W w
