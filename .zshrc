@@ -33,6 +33,7 @@ alias gt="git checkout"
 alias gc="git commit"
 alias gp="git pull"
 alias gg="git push"
+alias gd="git diff"
 
 alias tt="tree --dirsfirst"
 alias t="tt -L 1"
