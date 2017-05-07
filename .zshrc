@@ -10,7 +10,9 @@ HYPHEN_INSENSITIVE="true"
 export ZSH=/home/alexander/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 export PATH=.:$HOME:$HOME/bin:/usr/local/bin:$PATH
-plugins=(colored-man-pages colorize dircycle extract per-directory-history web-search wd battery emoji-clock nyan rand-quote)
+plugins=(colored-man-pages colorize dircycle extract git per-directory-history web-search wd battery emoji-clock nyan rand-quote)
+
+alias g="grep -rnw"
 
 eval "$(fasd --init auto)"
 alias fsd="fasd -b viminfo -b recently-used -b current"
