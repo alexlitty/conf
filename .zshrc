@@ -7,7 +7,7 @@ unsetopt correct_all
 CASE_SENSITIVE="false"
 HYPHEN_INSENSITIVE="true"
 
-export ZSH=/home/alexander/.oh-my-zsh
+export ZSH=/home/litty/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 export PATH=.:$HOME:$HOME/bin:/usr/local/bin:$PATH
 plugins=(colored-man-pages colorize dircycle extract git per-directory-history web-search wd battery emoji-clock nyan rand-quote)
@@ -29,7 +29,6 @@ alias w="wd"
 alias wa="wd add!"
 alias wr="wd rm"
 alias ws="wd show"
-alias wc="wd clean!"
 
 alias c="clear"
 alias gs="git status -s"
@@ -38,6 +37,21 @@ alias gc="git commit --verbose"
 alias gp="git pull"
 alias gg="git push"
 alias gd="git diff"
+alias gd="git diff --staged"
 
+alias tree="tree -C"
 alias tt="tree --dirsfirst"
 alias t="tt -L 1"
+
+# Fuzzy File Finder
+export FZF_DEFAULT_OPTS='
+    --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229
+    --color info:150,prompt:110,spinner:150,pointer:167,marker:174
+'
+
+z() {
+    file=$(fzf)
+    if [ $? -eq 0 ]; then
+        vim ${file}
+    fi
+}
