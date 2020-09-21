@@ -16,6 +16,11 @@ set copyindent
 set number
 set relativenumber
 
+set ruler
+
+set nofixendofline
+
 syntax on
+au BufNewFile,BufRead *.mm set filetype=cpp
 
 cnoreabbrev W w
