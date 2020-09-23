@@ -49,6 +49,7 @@ export FZF_DEFAULT_OPTS='
     --color info:150,prompt:110,spinner:150,pointer:167,marker:174
 '
 
+unalias z
 z() {
     file=$(fzf)
     if [ $? -eq 0 ]; then
