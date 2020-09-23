@@ -7,7 +7,7 @@ unsetopt correct_all
 CASE_SENSITIVE="false"
 HYPHEN_INSENSITIVE="true"
 
-export ZSH=/home/litty/.oh-my-zsh
+export ZSH=/Users/litty/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 export PATH=.:$HOME:$HOME/bin:/usr/local/bin:$PATH
 plugins=(colored-man-pages colorize dircycle extract git per-directory-history web-search wd battery emoji-clock nyan rand-quote)
