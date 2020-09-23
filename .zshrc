@@ -8,9 +8,9 @@ CASE_SENSITIVE="false"
 HYPHEN_INSENSITIVE="true"
 
 export ZSH=/Users/litty/.oh-my-zsh
+plugins=(git wd fasd)
 source $ZSH/oh-my-zsh.sh
 export PATH=.:$HOME:$HOME/bin:/usr/local/bin:$PATH
-plugins=(colored-man-pages colorize dircycle extract git per-directory-history web-search wd battery emoji-clock nyan rand-quote)
 
 alias g="grep -rnw"
 
