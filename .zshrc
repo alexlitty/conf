@@ -37,7 +37,7 @@ alias gc="git commit --verbose"
 alias gp="git pull"
 alias gg="git push"
 alias gd="git diff"
-alias gd="git diff --staged"
+alias gf="git diff --staged"
 
 alias tree="tree -C"
 alias tt="tree --dirsfirst"
